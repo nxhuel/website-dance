@@ -1,0 +1,169 @@
+.custom-font {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: transparent;
+  position: fixed;
+  padding: 1%;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: ease-in-out 0.9s;
+}
+
+.navbar-scrolling {
+  background-color: white;
+  position: fixed;
+  color: #333;
+  padding: 1%;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: ease-in-out 0.9s;
+}
+
+.mobile-menu.dark {
+  background-color: white;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  margin-right: 2%;
+}
+
+.container-items {
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+}
+
+.nav-link-dark {
+  text-decoration: none;
+  margin-right: 20px;
+  color: inherit;
+  color: rgb(255, 255, 255);
+}
+
+.nav-link-light {
+  text-decoration: none;
+  margin-right: 20px;
+  color: inherit;
+  color: #333;
+}
+
+.nav-link-dark:hover {
+  color: rgba(240, 248, 255, 0.548);
+  transition: ease-in-out 0.3s;
+}
+
+.nav-link-light:hover {
+  color: rgba(170, 170, 170, 0.829);
+  transition: ease-in-out 0.3s;
+}
+
+.instagram-logo {
+  position: relative;
+  top: 3px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+.instagram-logo:hover {
+  background-color: rgba(240, 248, 255, 0.548);
+  transition: ease-in-out 0.3s;
+}
+
+.nav_toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar,
+  .navbar-scrolling {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: none;
+    background-color: white;
+  }
+
+  .navbar-scrolling {
+    background-color: white;
+    color: #333;
+    padding: 1%;
+    z-index: 2;
+  }
+
+  .container-items {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav_toggle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 4%;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation-name: menu;
+    animation-duration: 2s;
+    /* padding-bottom: 15%; */
+  }
+
+  @keyframes menu {
+    0% {
+      top: 0px;
+    }
+    100% {
+      top: 4%;
+    }
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0%);
+    transition: 0.3s ease all;
+  }
+
+  .mobile-menu.open .header-title {
+    z-index: -1;
+  }
+
+  .mobile-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .mobile-menu-toggle img {
+    width: 30px;
+    height: 30px;
+    background-color: aliceblue;
+  }
+
+  .nav_toggle.open .mobile-menu {
+    display: flex;
+    transform: translateX(0) !important;
+    transition: 0.3s ease all;
+  }
+}
