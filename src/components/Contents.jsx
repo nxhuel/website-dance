@@ -54,9 +54,12 @@ export default function Contents() {
                 </div>
                 <CarruselImgTeacher />
                 <div className="text-teacher">
-                    <p className='text-teacher-responsive'>Consultá por seminarios en tu lugar o inscripción en mis clases en PISO 2 en movimiento.</p>
+                    <div className="text-teacher-responsive">
+                        <p>Consultá por seminarios en tu lugar o inscripción en mis clases en PISO 2 en movimiento.</p>
+                    </div>
+                    <FormTeacher />
                 </div>
-                <FormTeacher />
+
             </article>
         </>
     )

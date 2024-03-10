@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import Header from "./components/Header"
 import Contents from "./components/Contents"
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
       <main>
         <Contents />
       </main>
+      <Footer />
+      {/* <footer>
+        <p>hola</p>
+      </footer> */}
     </>
   )
 }
